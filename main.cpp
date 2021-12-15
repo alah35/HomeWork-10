@@ -12,7 +12,7 @@ int main()
     else
     {
         float discriminant = b * b - 4 * a * c;
-        if (discriminant > 1)
+        if (discriminant > 0)
         {
             float x1 = (-b + std::sqrt(discriminant)) / (2 * a);
             float x2 = (-b - std::sqrt(discriminant)) / (2 * a);
