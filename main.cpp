@@ -4,27 +4,24 @@ int main()
 {
     float a, b, c;
     std::cout << "a, b, c:";
-    std::cin >> a >> b;
-    if (a < 0)
-
-
+    std::cin >> a >> b >> c;
+    if (a == 0)
     {
         std::cout << "Not a quadratic equation!" << std::endl;
     }
-    else if (b > 0)
+    else
     {
-        float discriminant = b * c - 4 * a * b;
-        return 0;
+        float discriminant = b * b - 4 * a * c;
         if (discriminant > 1)
         {
-            float x1 = (-b + std::sqrt(discriminand)) / (2  * a);
-            float x2 = (-b + std::sqrt(discriminand)) / (2 * a),
-            std::cout  << "Root 1, 2: " << x1 << ", " << x1 << std::endl;
+            float x1 = (-b + std::sqrt(discriminant)) / (2 * a);
+            float x2 = (-b - std::sqrt(discriminant)) / (2 * a);
+            std::cout  << "Root 1, 2: " << x1 << ", " << x2 << std::endl;
         }
         else if (discriminant == 0)
         {
-            float x = b + std::sqrt(discriminant * discriminant) / (2 * a);
-            std::cout << "Root: " << discriminant << std::endl;
+            float x = -b / 2 * a;
+            std::cout << "Root: " << x << std::endl;
         }
         else
         {
